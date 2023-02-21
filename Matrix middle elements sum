@@ -1,0 +1,52 @@
+//Matrix middle rows and column sum
+
+#include<bits/stdc++.h>
+
+using namespace std;
+
+int main()
+
+{
+
+ int r, c;
+
+  cout<<"enter row size: ";
+
+  cin>>r;
+
+  cout<<"enter column size: ";
+
+  cin>>c;
+
+ cout<<"enter matrix elements "<<endl;
+
+ int a[r][c];
+
+ int rsum=0, csum=0;
+
+ int rmid=floor((r-1)/2), cmid=floor((c-1)/2);
+
+ for(int i=0; i<r; i++)
+
+ for(int j=0; j<c; j++)
+
+ cin>>a[i][j];
+
+ for(int i=0; i<c; i++)
+
+ rsum+=a[rmid][i];
+
+ for(int j=0; j<r; j++)
+
+ csum+=a[j][cmid];
+
+ cout<<rsum<<" "<<"row sum"<<endl;
+
+ cout<<csum<<" "<<"column sum"<<endl;
+
+ cout<<rsum+csum<<" "<<"both row and column sum"<<endl;
+
+}
+
+
+
